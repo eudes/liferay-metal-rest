@@ -80,7 +80,7 @@ To enable MetalJS with JSX in the portlet we need to create and configure a few 
 ### package.json
 This defines the metadata, dependencies and build commands. For metal + JSX you need:
 
-```
+```json
 {
   "dependencies": {
     "metal-component": "^2.15.0",
@@ -164,4 +164,18 @@ The only special dependency to allow REST applications in our portlet is:
     
 ```
 compileOnly group: 'javax.ws.rs', name: 'javax.ws.rs-api', version: '2.0'
+```
+
+### A note about Liferay gradle plugin versions
+For the gradle-NPM integration to work, your workspace or project must be configured to use
+the following versions of the gradle plugins. This config can be added to the project's 
+gradle.build, or the the Liferay workspace settings.gradle buildscript dependencies.
+
+```
+buildscript {
+    dependencies{
+        classpath group: "com.liferay", name: "com.liferay.gradle.plugins.workspace", version: "1.8.0"
+        classpath group: "com.liferay", name: "com.liferay.gradle.plugins.node", version: "4.0.0"
+    }
+}
 ```

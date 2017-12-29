@@ -13,7 +13,9 @@ class Modal extends JSXComponent {
                 );
             })
         } else {
-            this.state.text = this.props.body;
+            this.setState(
+                {text: this.props.body}
+            );
         }
     }
     /**
