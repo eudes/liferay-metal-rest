@@ -1,0 +1,8 @@
+Bundle-SymbolicName: metal.rest
+Bundle-Version: 1.0.0
+
+# WS
+Liferay-Configuration-Path: /configuration
+
+# Metal
+Web-ContextPath: /metal-rest
